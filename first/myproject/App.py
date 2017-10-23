@@ -1,5 +1,5 @@
 from flask import Flask,render_template
-
+from data import addtoshop
 app = Flask(__name__)
 
 
@@ -17,8 +17,12 @@ def contact():
 		
 @app.route("/shop")
 def shop():
-    return render_template("shoppinglist.html")
+    return render_template("shop.html",shop=addtoshop)
 	
+@app.route("/faq")
+def faq():
+    return render_template("faq.html")
+				
 	
 @app.route("/login")
 def login():

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{%extends 'layout.html'%}
+{%block body%}
+<ul class="list-group"
+{%for items in shoppinglist%}
+{li class="list-group-item"><a href="/shop">{{shoppinglist.tem}}</a></li>
+ <form action="/action_page.php">
+    <h3>List:</h3>
+<table class="table">
+<thead>
+<tr>
+<th>item</th>
+<th>quantity</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="table-active"></td>
+<td class="table-success"></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td class="table-info"></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td class="table-danger">total</td>
+<td>&nbsp;</td>
+<td class="table-warning">ksh:</td>
+</tr>
+</tbody>
+</table>
+</div>
+ <div class="input-group">
+	<button type="submit" class="btn btn-default">delete</button>
+	</div>
+
+</form>
+{%endblock%}
+
