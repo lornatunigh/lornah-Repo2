@@ -1,7 +1,7 @@
 from flask import Flask,render_template
-
+from data import shoplist
 app = Flask(__name__)
-
+shoplist=shoplist()
 
 @app.route("/")
 def home():
@@ -17,8 +17,12 @@ def contact():
 		
 @app.route("/shop")
 def shop():
-    return render_template("shoppinglist.html")
+    return render_template("shop.html",shop=shoplist)
 	
+@app.route("/faq")
+def faq():
+    return render_template("faq.html")
+				
 	
 @app.route("/login")
 def login():
